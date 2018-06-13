@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3FD0B41D20D1631600B11647 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0B41C20D1631600B11647 /* AppDelegate.swift */; };
+		3FD0B41F20D1631600B11647 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0B41E20D1631600B11647 /* ViewController.swift */; };
+		3FD0B42120D1631600B11647 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD0B42020D1631600B11647 /* Assets.xcassets */; };
+		3FD0B42420D1631600B11647 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD0B42220D1631600B11647 /* Main.storyboard */; };
+		3FD0B43020D1631600B11647 /* waterBottleTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0B42F20D1631600B11647 /* waterBottleTimerTests.swift */; };
+		3FD0B43B20D1631600B11647 /* waterBottleTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0B43A20D1631600B11647 /* waterBottleTimerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FD0B42C20D1631600B11647 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FD0B41120D1631600B11647 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FD0B41820D1631600B11647;
+			remoteInfo = waterBottleTimer;
+		};
+		3FD0B43720D1631600B11647 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FD0B41120D1631600B11647 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FD0B41820D1631600B11647;
+			remoteInfo = waterBottleTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3FD0B41920D1631600B11647 /* waterBottleTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = waterBottleTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FD0B41C20D1631600B11647 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3FD0B41E20D1631600B11647 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3FD0B42020D1631600B11647 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FD0B42320D1631600B11647 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3FD0B42520D1631600B11647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FD0B42620D1631600B11647 /* waterBottleTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = waterBottleTimer.entitlements; sourceTree = "<group>"; };
+		3FD0B42B20D1631600B11647 /* waterBottleTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = waterBottleTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FD0B42F20D1631600B11647 /* waterBottleTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waterBottleTimerTests.swift; sourceTree = "<group>"; };
+		3FD0B43120D1631600B11647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FD0B43620D1631600B11647 /* waterBottleTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = waterBottleTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FD0B43A20D1631600B11647 /* waterBottleTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = waterBottleTimerUITests.swift; sourceTree = "<group>"; };
+		3FD0B43C20D1631600B11647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FD0B41620D1631600B11647 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FD0B42820D1631600B11647 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FD0B43320D1631600B11647 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FD0B41020D1631600B11647 = {
+			isa = PBXGroup;
+			children = (
+				3FD0B41B20D1631600B11647 /* waterBottleTimer */,
+				3FD0B42E20D1631600B11647 /* waterBottleTimerTests */,
+				3FD0B43920D1631600B11647 /* waterBottleTimerUITests */,
+				3FD0B41A20D1631600B11647 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FD0B41A20D1631600B11647 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FD0B41920D1631600B11647 /* waterBottleTimer.app */,
+				3FD0B42B20D1631600B11647 /* waterBottleTimerTests.xctest */,
+				3FD0B43620D1631600B11647 /* waterBottleTimerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FD0B41B20D1631600B11647 /* waterBottleTimer */ = {
+			isa = PBXGroup;
+			children = (
+				3FD0B41C20D1631600B11647 /* AppDelegate.swift */,
+				3FD0B41E20D1631600B11647 /* ViewController.swift */,
+				3FD0B42020D1631600B11647 /* Assets.xcassets */,
+				3FD0B42220D1631600B11647 /* Main.storyboard */,
+				3FD0B42520D1631600B11647 /* Info.plist */,
+				3FD0B42620D1631600B11647 /* waterBottleTimer.entitlements */,
+			);
+			path = waterBottleTimer;
+			sourceTree = "<group>";
+		};
+		3FD0B42E20D1631600B11647 /* waterBottleTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FD0B42F20D1631600B11647 /* waterBottleTimerTests.swift */,
+				3FD0B43120D1631600B11647 /* Info.plist */,
+			);
+			path = waterBottleTimerTests;
+			sourceTree = "<group>";
+		};
+		3FD0B43920D1631600B11647 /* waterBottleTimerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3FD0B43A20D1631600B11647 /* waterBottleTimerUITests.swift */,
+				3FD0B43C20D1631600B11647 /* Info.plist */,
+			);
+			path = waterBottleTimerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FD0B41820D1631600B11647 /* waterBottleTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FD0B43F20D1631600B11647 /* Build configuration list for PBXNativeTarget "waterBottleTimer" */;
+			buildPhases = (
+				3FD0B41520D1631600B11647 /* Sources */,
+				3FD0B41620D1631600B11647 /* Frameworks */,
+				3FD0B41720D1631600B11647 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = waterBottleTimer;
+			productName = waterBottleTimer;
+			productReference = 3FD0B41920D1631600B11647 /* waterBottleTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3FD0B42A20D1631600B11647 /* waterBottleTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FD0B44220D1631600B11647 /* Build configuration list for PBXNativeTarget "waterBottleTimerTests" */;
+			buildPhases = (
+				3FD0B42720D1631600B11647 /* Sources */,
+				3FD0B42820D1631600B11647 /* Frameworks */,
+				3FD0B42920D1631600B11647 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FD0B42D20D1631600B11647 /* PBXTargetDependency */,
+			);
+			name = waterBottleTimerTests;
+			productName = waterBottleTimerTests;
+			productReference = 3FD0B42B20D1631600B11647 /* waterBottleTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3FD0B43520D1631600B11647 /* waterBottleTimerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FD0B44520D1631600B11647 /* Build configuration list for PBXNativeTarget "waterBottleTimerUITests" */;
+			buildPhases = (
+				3FD0B43220D1631600B11647 /* Sources */,
+				3FD0B43320D1631600B11647 /* Frameworks */,
+				3FD0B43420D1631600B11647 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FD0B43820D1631600B11647 /* PBXTargetDependency */,
+			);
+			name = waterBottleTimerUITests;
+			productName = waterBottleTimerUITests;
+			productReference = 3FD0B43620D1631600B11647 /* waterBottleTimerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FD0B41120D1631600B11647 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "George Hajjar";
+				TargetAttributes = {
+					3FD0B41820D1631600B11647 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					3FD0B42A20D1631600B11647 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3FD0B41820D1631600B11647;
+					};
+					3FD0B43520D1631600B11647 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3FD0B41820D1631600B11647;
+					};
+				};
+			};
+			buildConfigurationList = 3FD0B41420D1631600B11647 /* Build configuration list for PBXProject "waterBottleTimer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FD0B41020D1631600B11647;
+			productRefGroup = 3FD0B41A20D1631600B11647 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FD0B41820D1631600B11647 /* waterBottleTimer */,
+				3FD0B42A20D1631600B11647 /* waterBottleTimerTests */,
+				3FD0B43520D1631600B11647 /* waterBottleTimerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FD0B41720D1631600B11647 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD0B42120D1631600B11647 /* Assets.xcassets in Resources */,
+				3FD0B42420D1631600B11647 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FD0B42920D1631600B11647 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FD0B43420D1631600B11647 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FD0B41520D1631600B11647 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD0B41F20D1631600B11647 /* ViewController.swift in Sources */,
+				3FD0B41D20D1631600B11647 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FD0B42720D1631600B11647 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD0B43020D1631600B11647 /* waterBottleTimerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FD0B43220D1631600B11647 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD0B43B20D1631600B11647 /* waterBottleTimerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FD0B42D20D1631600B11647 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FD0B41820D1631600B11647 /* waterBottleTimer */;
+			targetProxy = 3FD0B42C20D1631600B11647 /* PBXContainerItemProxy */;
+		};
+		3FD0B43820D1631600B11647 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FD0B41820D1631600B11647 /* waterBottleTimer */;
+			targetProxy = 3FD0B43720D1631600B11647 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3FD0B42220D1631600B11647 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FD0B42320D1631600B11647 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FD0B43D20D1631600B11647 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3FD0B43E20D1631600B11647 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		3FD0B44020D1631600B11647 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = waterBottleTimer/waterBottleTimer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = waterBottleTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = george.waterBottleTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		3FD0B44120D1631600B11647 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = waterBottleTimer/waterBottleTimer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = waterBottleTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = george.waterBottleTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		3FD0B44320D1631600B11647 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = waterBottleTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = george.waterBottleTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/waterBottleTimer.app/Contents/MacOS/waterBottleTimer";
+			};
+			name = Debug;
+		};
+		3FD0B44420D1631600B11647 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = waterBottleTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = george.waterBottleTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/waterBottleTimer.app/Contents/MacOS/waterBottleTimer";
+			};
+			name = Release;
+		};
+		3FD0B44620D1631600B11647 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = waterBottleTimerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = george.waterBottleTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = waterBottleTimer;
+			};
+			name = Debug;
+		};
+		3FD0B44720D1631600B11647 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = waterBottleTimerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = george.waterBottleTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_TARGET_NAME = waterBottleTimer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FD0B41420D1631600B11647 /* Build configuration list for PBXProject "waterBottleTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FD0B43D20D1631600B11647 /* Debug */,
+				3FD0B43E20D1631600B11647 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FD0B43F20D1631600B11647 /* Build configuration list for PBXNativeTarget "waterBottleTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FD0B44020D1631600B11647 /* Debug */,
+				3FD0B44120D1631600B11647 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FD0B44220D1631600B11647 /* Build configuration list for PBXNativeTarget "waterBottleTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FD0B44320D1631600B11647 /* Debug */,
+				3FD0B44420D1631600B11647 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FD0B44520D1631600B11647 /* Build configuration list for PBXNativeTarget "waterBottleTimerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FD0B44620D1631600B11647 /* Debug */,
+				3FD0B44720D1631600B11647 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FD0B41120D1631600B11647 /* Project object */;
+}

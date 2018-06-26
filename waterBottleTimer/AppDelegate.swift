@@ -21,17 +21,18 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     var frequency:String = ""
     var timer = Timer()
     
-    var ones_sec = 5
-    var tens_sec = 0
-    var ones_min = 0
-    var tens_min = 0
+//    var ones_sec = 5
+//    var tens_sec = 0
+//    var ones_min = 0
+//    var tens_min = 0
     
-//    var ones_sec = 9
-//    var tens_sec = 5
-//    var ones_min = 9
-//    var tens_min = 5
+    var ones_sec = 9
+    var tens_sec = 5
+    var ones_min = 9
+    var tens_min = 5
+    
     var isStart:Bool = true
-    var bottleFills = 0
+    var bottleFills = 1
     
     let customSound: SystemSoundID = 1336
     
@@ -111,7 +112,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         ones_min = 9
         tens_min = 5
         startStop.title = "Start"
-        
+        isStart = true
+        bottleFills = 1
         statusItem.title = String(tens_min) + String(ones_min) + ":" + String(tens_sec) + String(ones_sec)
     }
     

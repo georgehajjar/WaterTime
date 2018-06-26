@@ -21,7 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     var frequency:String = ""
     var timer = Timer()
     
-//    var ones_sec = 5
+//    var ones_sec = 2
 //    var tens_sec = 0
 //    var ones_min = 0
 //    var tens_min = 0
@@ -33,12 +33,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     var isStart:Bool = true
     var bottleFills = 1
-    
-    let customSound: SystemSoundID = 1336
-    
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusItem.menu = mainMenu
-        statusItem.title = "WaterTimer"
+        statusItem.title = "WaterTimer" //Add waterbottle icon
         NSUserNotificationCenter.default.delegate = self
     }
     
@@ -121,7 +119,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         let notification = NSUserNotification()
         notification.title = "Fill Up Your Waterbottle!"
         notification.informativeText = String(format: "You've drank %dml of water today.", (bottleFills*500))
-        notification.soundName = "customSound"
+        notification.soundName = NSUserNotificationDefaultSoundName //Add custom sound
         NSUserNotificationCenter.default.deliver(notification)
         bottleFills += 1
     }
@@ -129,7 +127,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     func showDrinkNotification() -> Void {
         let notification = NSUserNotification()
         notification.title = "Reminder to drink"
-        notification.soundName = "customSound"
+        notification.soundName = NSUserNotificationDefaultSoundName
         NSUserNotificationCenter.default.deliver(notification)
     }
     
@@ -143,12 +141,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         window.setFrameOrigin(NSPoint(x: 2000 , y: 1200))
     }
     
+    @IBAction func quitPressed(_ sender: Any) {
+        NSApplication.shared.terminate(self)
+    }
+    
     @IBAction func remindFreq(_ sender: NSButton) {
         frequency = sender.title
     }
     
     @IBAction func submitPressed(_ sender: Any) {
-        print(frequency)
         window.close()
     }
 }

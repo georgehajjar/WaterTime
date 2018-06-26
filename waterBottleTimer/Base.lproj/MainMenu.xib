@@ -42,6 +42,13 @@
                         <action selector="openSettings:" target="Voe-Tx-rLC" id="MzU-H9-tvW"/>
                     </connections>
                 </menuItem>
+                <menuItem isSeparatorItem="YES" id="nKr-Ok-js5"/>
+                <menuItem title="Quit" id="f6k-qy-cod">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitPressed:" target="Voe-Tx-rLC" id="7nC-6n-P66"/>
+                    </connections>
+                </menuItem>
             </items>
             <point key="canvasLocation" x="-1186" y="-339"/>
         </menu>

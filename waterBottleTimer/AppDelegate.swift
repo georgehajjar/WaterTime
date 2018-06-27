@@ -36,7 +36,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusItem.menu = mainMenu
-        statusItem.title = "WaterTimer" //Add waterbottle icon
+        
+        let icon = NSImage(named: NSImage.Name(rawValue: "statusIcon"))
+        icon?.isTemplate = true
+        statusItem.image = icon
+        
         NSUserNotificationCenter.default.delegate = self
     }
     
@@ -104,6 +108,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     }
     
     @IBAction func resetPressed(_ sender: Any) {
+        //TODO: Disable this button before start is pressed.
+        
         timer.invalidate()
         ones_sec = 9
         tens_sec = 5

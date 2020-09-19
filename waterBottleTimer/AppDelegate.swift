@@ -15,45 +15,56 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
     @IBOutlet weak var mainMenu: NSMenu!
-    @IBOutlet weak var startStop: NSMenuItem!
+    @IBOutlet weak var startPause: NSMenuItem!
+    @IBOutlet weak var reset: NSMenuItem!
     @IBOutlet weak var window: NSPanel!
+    @IBOutlet weak var reminderFrequency: NSPopUpButton!
+    @IBOutlet weak var waterBottleCapacity: NSTextField!
     
-    var frequency:String = ""
+    var frequency:String?
+    var capacity:Int = 0
     var timer = Timer()
+    
+    var isStart:Bool = true
+    var bottleFills = 1
     
 //    var ones_sec = 2
 //    var tens_sec = 0
 //    var ones_min = 0
 //    var tens_min = 0
-    
+
     var ones_sec = 9
     var tens_sec = 5
     var ones_min = 9
     var tens_min = 5
-    
-    var isStart:Bool = true
-    var bottleFills = 1
+
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusItem.menu = mainMenu
+        self.mainMenu.autoenablesItems = false
         
         let icon = NSImage(named: NSImage.Name(rawValue: "statusIcon"))
         icon?.isTemplate = true
         statusItem.image = icon
         
         NSUserNotificationCenter.default.delegate = self
+        
+        reminderFrequency.removeAllItems()
+        reminderFrequency.addItems(withTitles: ["10 minutes", "15 minutes", "20 minutes", "30 minutes"])
     }
+
     
     @IBAction func startPressed(_ sender: Any) {
+        self.reset.isEnabled = true
         if isStart {
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(AppDelegate.tick), userInfo: nil, repeats: true)
             isStart = false
-            startStop.title = "Stop"
+            startPause.title = "Pause"
         }
         else {
             timer.invalidate()
             isStart = true
-            startStop.title = "Start"
+            startPause.title = "Start"
         }
     }
     
@@ -108,15 +119,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     }
     
     @IBAction func resetPressed(_ sender: Any) {
-        //TODO: Disable this button before start is pressed.
-        
         timer.invalidate()
         ones_sec = 9
         tens_sec = 5
         ones_min = 9
         tens_min = 5
-        startStop.title = "Start"
+        startPause.title = "Start"
         isStart = true
+        self.reset.isEnabled = false
         bottleFills = 1
         statusItem.title = String(tens_min) + String(ones_min) + ":" + String(tens_sec) + String(ones_sec)
     }
@@ -124,8 +134,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     func showFillNotification() -> Void {
         let notification = NSUserNotification()
         notification.title = "Fill Up Your Waterbottle!"
-        notification.informativeText = String(format: "You've drank %dml of water today.", (bottleFills*500))
-        notification.soundName = NSUserNotificationDefaultSoundName //Add custom sound
+        notification.informativeText = String(format: "You've drank %dml of water today.", (bottleFills*capacity))
+        notification.soundName = "Glass"
         NSUserNotificationCenter.default.deliver(notification)
         bottleFills += 1
     }
@@ -133,7 +143,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     func showDrinkNotification() -> Void {
         let notification = NSUserNotification()
         notification.title = "Reminder to drink"
-        notification.soundName = NSUserNotificationDefaultSoundName
+        notification.soundName = "Submarine"
         NSUserNotificationCenter.default.deliver(notification)
     }
     
@@ -144,18 +154,19 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     @IBAction func openSettings(_ sender: Any) {
         NSApp.activate(ignoringOtherApps: true)
         window.orderFront(self)
-        window.setFrameOrigin(NSPoint(x: 2000 , y: 1200))
+        window.setFrameOrigin(NSPoint(x: (NSScreen.main?.frame.width)!/2, y: (NSScreen.main?.frame.height)!/2))
     }
     
     @IBAction func quitPressed(_ sender: Any) {
         NSApplication.shared.terminate(self)
     }
     
-    @IBAction func remindFreq(_ sender: NSButton) {
-        frequency = sender.title
+    @IBAction func reminderFrequency(_ sender: NSPopUpButton) {
+        frequency = sender.selectedItem?.title
     }
     
     @IBAction func submitPressed(_ sender: Any) {
+        capacity = waterBottleCapacity.integerValue
         window.close()
     }
 }

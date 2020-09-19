@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097.2"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,7 +16,10 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="waterBottleTimer" customModuleProvider="target">
             <connections>
                 <outlet property="mainMenu" destination="eta-3G-QdL" id="Vdd-eu-dHw"/>
-                <outlet property="startStop" destination="b9Q-La-sjr" id="KsM-Dw-zW4"/>
+                <outlet property="reminderFrequency" destination="wnl-mC-5Nv" id="7ie-jb-8Nj"/>
+                <outlet property="reset" destination="Rxk-Qf-ftg" id="8Lm-0l-JxC"/>
+                <outlet property="startPause" destination="b9Q-La-sjr" id="3VX-ij-ItC"/>
+                <outlet property="waterBottleCapacity" destination="BKX-KM-pOD" id="uzW-YY-5hw"/>
                 <outlet property="window" destination="Y3F-ho-EHr" id="UNg-4A-MoZ"/>
             </connections>
         </customObject>
@@ -29,7 +32,7 @@
                         <action selector="startPressed:" target="Voe-Tx-rLC" id="lor-sP-5ff"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Reset" id="Rxk-Qf-ftg">
+                <menuItem title="Reset" enabled="NO" id="Rxk-Qf-ftg">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="resetPressed:" target="Voe-Tx-rLC" id="uKb-8y-4Se"/>
@@ -52,71 +55,31 @@
             </items>
             <point key="canvasLocation" x="-1186" y="-339"/>
         </menu>
-        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Y3F-ho-EHr" customClass="NSPanel">
+        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Y3F-ho-EHr" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="272" y="172" width="276" height="228"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <rect key="contentRect" x="533" y="292" width="388" height="217"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="UIy-qX-iOW">
-                <rect key="frame" x="0.0" y="0.0" width="276" height="228"/>
+                <rect key="frame" x="0.0" y="0.0" width="388" height="217"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QVL-Lw-PNw">
-                        <rect key="frame" x="18" y="185" width="166" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Remind you to drink every:" id="g8B-tr-8d9">
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QVL-Lw-PNw">
+                        <rect key="frame" x="28" y="166" width="137" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="0ZZ-vU-Yqz"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Reminder frequency:" id="g8B-tr-8d9">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lm3-Jr-WGl">
-                        <rect key="frame" x="19" y="149" width="88" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="radio" title="10 minutes" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="zVi-dR-4I3">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="remindFreq:" target="Voe-Tx-rLC" id="kM0-Vm-HEv"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5pZ-JE-3gE">
-                        <rect key="frame" x="19" y="121" width="88" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="radio" title="15 minutes" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="xgP-dn-GhY">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="remindFreq:" target="Voe-Tx-rLC" id="ueg-o7-dKh"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="toT-GG-HZq">
-                        <rect key="frame" x="19" y="90" width="90" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="radio" title="20 minutes" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="P8a-wF-JoY">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="remindFreq:" target="Voe-Tx-rLC" id="TPP-mc-p3M"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ORc-n8-d3W">
-                        <rect key="frame" x="19" y="60" width="90" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="radio" title="30 minutes" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="P7p-hY-fE2">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="remindFreq:" target="Voe-Tx-rLC" id="AC0-fS-JiM"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L9U-3K-KIt">
-                        <rect key="frame" x="97" y="13" width="83" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="L9U-3K-KIt">
+                        <rect key="frame" x="132" y="13" width="124" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="112" id="RnA-Z9-5G2"/>
+                        </constraints>
                         <buttonCell key="cell" type="push" title="Submit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="K4Q-45-ieI">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -125,9 +88,89 @@
                             <action selector="submitPressed:" target="Voe-Tx-rLC" id="jGi-7n-aPO"/>
                         </connections>
                     </button>
+                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wnl-mC-5Nv">
+                        <rect key="frame" x="206" y="163" width="155" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Zs4-GM-XK1"/>
+                            <constraint firstAttribute="width" constant="150" id="vlg-M7-3pE"/>
+                        </constraints>
+                        <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="2Cl-0K-flh" id="dtE-tS-cme">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <menu key="menu" id="bU8-83-PLt">
+                                <items>
+                                    <menuItem title="Item 1" state="on" id="2Cl-0K-flh"/>
+                                    <menuItem title="Item 2" id="CbP-50-amx"/>
+                                    <menuItem title="Item 3" id="2F2-YL-OQV"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                        <connections>
+                            <action selector="reminderFrequency:" target="Voe-Tx-rLC" id="aue-ya-aHI"/>
+                        </connections>
+                    </popUpButton>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LRb-RA-TOE">
+                        <rect key="frame" x="28" y="125" width="137" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="HDR-XQ-dug"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Waterbottle capacity:" id="jVS-OR-VxV">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BKX-KM-pOD">
+                        <rect key="frame" x="208" y="125" width="150" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="40X-7V-lVW"/>
+                            <constraint firstAttribute="width" constant="150" id="leE-B4-Ynp"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="milliliters" drawsBackground="YES" id="kYk-0j-AwQ">
+                            <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="VqK-WO-qcH"/>
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JFi-Cf-1JZ">
+                        <rect key="frame" x="206" y="106" width="154" height="17"/>
+                        <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="*Avergae waterbottle 500ml" id="1q8-fa-B48">
+                            <font key="font" metaFont="menu" size="9"/>
+                            <color key="textColor" name="systemTealColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3X0-bp-YZg">
+                        <rect key="frame" x="70" y="53" width="248" height="17"/>
+                        <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="This app assumes you finish your waterbottle in 1 hour" id="nCf-Od-qNY">
+                            <font key="font" metaFont="menu" size="9"/>
+                            <color key="textColor" name="systemTealColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="wnl-mC-5Nv" secondAttribute="trailing" constant="30" id="2pV-ED-1JW"/>
+                    <constraint firstAttribute="trailing" secondItem="L9U-3K-KIt" secondAttribute="trailing" constant="138" id="33Z-ek-cgm"/>
+                    <constraint firstItem="LRb-RA-TOE" firstAttribute="top" secondItem="QVL-Lw-PNw" secondAttribute="bottom" constant="20" id="AS0-6A-tbb"/>
+                    <constraint firstItem="L9U-3K-KIt" firstAttribute="top" secondItem="3X0-bp-YZg" secondAttribute="bottom" constant="20" id="AgV-nn-WeI"/>
+                    <constraint firstItem="wnl-mC-5Nv" firstAttribute="leading" secondItem="QVL-Lw-PNw" secondAttribute="trailing" constant="45" id="HKS-W8-x63"/>
+                    <constraint firstItem="BKX-KM-pOD" firstAttribute="top" secondItem="wnl-mC-5Nv" secondAttribute="bottom" constant="20" id="N4u-iH-pQ6"/>
+                    <constraint firstItem="LRb-RA-TOE" firstAttribute="leading" secondItem="UIy-qX-iOW" secondAttribute="leading" constant="30" id="Pcg-jY-Edl"/>
+                    <constraint firstAttribute="trailing" secondItem="JFi-Cf-1JZ" secondAttribute="trailing" constant="30" id="Ve1-xV-NHg"/>
+                    <constraint firstAttribute="trailing" secondItem="BKX-KM-pOD" secondAttribute="trailing" constant="30" id="XHN-tM-OvY"/>
+                    <constraint firstAttribute="bottom" secondItem="L9U-3K-KIt" secondAttribute="bottom" constant="20" id="cth-oU-8ec"/>
+                    <constraint firstItem="3X0-bp-YZg" firstAttribute="leading" secondItem="UIy-qX-iOW" secondAttribute="leading" constant="72" id="dD9-gl-DFn"/>
+                    <constraint firstItem="JFi-Cf-1JZ" firstAttribute="top" secondItem="BKX-KM-pOD" secondAttribute="bottom" constant="3" id="eEV-11-LDC"/>
+                    <constraint firstItem="QVL-Lw-PNw" firstAttribute="leading" secondItem="UIy-qX-iOW" secondAttribute="leading" constant="30" id="eSb-Xk-eiU"/>
+                    <constraint firstItem="BKX-KM-pOD" firstAttribute="leading" secondItem="LRb-RA-TOE" secondAttribute="trailing" constant="45" id="hrj-wV-fmY"/>
+                    <constraint firstItem="wnl-mC-5Nv" firstAttribute="top" secondItem="UIy-qX-iOW" secondAttribute="top" constant="30" id="oq2-kb-TTx"/>
+                    <constraint firstItem="L9U-3K-KIt" firstAttribute="leading" secondItem="UIy-qX-iOW" secondAttribute="leading" constant="138" id="vbx-yu-vgF"/>
+                    <constraint firstItem="QVL-Lw-PNw" firstAttribute="top" secondItem="UIy-qX-iOW" secondAttribute="top" constant="30" id="y98-5E-Qnt"/>
+                </constraints>
             </view>
-            <point key="canvasLocation" x="-1186" y="-92"/>
+            <point key="canvasLocation" x="-1185" y="-93.5"/>
         </window>
     </objects>
 </document>
